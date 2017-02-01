@@ -6,6 +6,12 @@ const PORT = 8080;
 const db = require('./models');
 const Card = db.Card;
 const home = require('./routes/home');
+const path = require('path');
+const fs = require('fs');
+const webpack = require('webpack');
+const webpackMiddleware = require('webpack-dev-middleware');
+const webpackHotMiddleware = require('webpack-hot-middleware');
+const config = require('./webpack.config.js');
 
 app.use(bodyParser.urlencoded({extended:true}))
 
