@@ -65,6 +65,19 @@ router.route('/:id')
       res.json(err.errors[0].message);
     })
   })
+  .delete((req,res) => {
+    Card.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+    .then( card => {
+        res.json(card);
+    })
+    .catch((err) => {
+      console.log(err);
+    })
+  })
 
 
 
