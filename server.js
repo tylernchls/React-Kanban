@@ -8,7 +8,7 @@ const Card = db.Card;
 const home = require('./routes/home');
 
 app.use(bodyParser.urlencoded({extended:true}))
-app.use(express.static('public'));
+
 
 app.use(methodOverride(function (req, res) {
   if (req.body && typeof req.body === 'object' && '_method' in req.body) {
@@ -18,10 +18,6 @@ app.use(methodOverride(function (req, res) {
   }
 }))
 
-app.use((req, res, next) => {
-  console.log('req: ', req);
-  next('route');
-})
 
 app.use('/', home);
 
