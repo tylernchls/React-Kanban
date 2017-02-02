@@ -1,10 +1,11 @@
 import React from 'react';
+import styles from './Card.scss'
 
-class ListItem extends React.Component {
+class Card extends React.Component {
 
  render() {
     return (
-      <div className="ListItem">
+      <div className={styles.Card}>
         <h3>Task: {this.props.task}</h3>
         <h3>Priority: {this.props.priority}</h3>
         <h3>Status: {this.props.status}</h3>
@@ -15,4 +16,4 @@ class ListItem extends React.Component {
   }
 };
 
-export default ListItem;
+export default Card;

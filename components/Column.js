@@ -1,13 +1,15 @@
 import React from 'react';
-import ListItem from './ListItem';
+import Card from './Card';
+import styles from './Column.scss'
 
-class List extends React.Component {
+class Column extends React.Component {
   render () {
     console.log('this.props: ', this.props);
-    let passedData = this.props.data.map((item, i) => {
+    const {cards} =  this.props;
+    let passedData = cards.map((item, i) => {
 
       return (
-        <ListItem
+        <Card
          key={item.id}
          task={item.title}
          priority={item.priority}
@@ -18,8 +20,7 @@ class List extends React.Component {
       )
     });
     return (
-      <div className="List">
-        <h3>List</h3>
+      <div className={styles.Column}>
         {passedData}
       </div>
     )
@@ -29,4 +30,4 @@ class List extends React.Component {
 };
 
 
-export default List;
+export default Column;

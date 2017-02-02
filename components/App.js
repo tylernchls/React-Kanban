@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Page from './Page';
+import ColumnsContainer from './ColumnsContainer';
 import Header from './static/Header';
+import styles from './App.scss';
 //
 class App extends React.Component {
     constructor () {
@@ -43,10 +44,9 @@ class App extends React.Component {
   render() {
     const {data} = this.state;
     return (
-      <div className="App">
+      <div className={styles.App}>
         <Header />
-        <h1>Main Page</h1>
-        <Page serverData={data} />
+        <ColumnsContainer serverData={data} />
       </div>
     )
   }
