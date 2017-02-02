@@ -5,7 +5,7 @@ const methodOverride = require('method-override');
 const PORT = 8080;
 const db = require('./models');
 const Card = db.Card;
-const api = require('./routes/api');
+const card = require('./routes/card');
 const path = require('path');
 const fs = require('fs');
 const webpack = require('webpack');
@@ -24,7 +24,7 @@ app.use(methodOverride(function (req, res) {
   }
 }))
 
-app.use('/api', api);
+app.use('/api/cards', card);
 
 
 // Check to see what dev environment we are in

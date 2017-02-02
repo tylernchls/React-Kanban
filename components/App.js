@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Page from './components/Page';
+import Page from './Page';
 import Header from './components/static/Header';
 
 class App extends React.Component {
@@ -8,7 +8,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <h1>Main Page</h1>
+        <h1>Kanban Main Page</h1>
         <Page />
       </div>
     )
