@@ -1,6 +1,16 @@
-h2{
-  color: white;
-  font-size: 20px;
+.Header {
+  position: relative;
   background-color: rgb(76,82,90);
   height: 60px;
+
+  h2{
+    font-size: 15px;
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+  }
 }
+
