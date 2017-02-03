@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import Immutable from 'immutable';
-import { setItems } from '../actions/cardsActions';
+import { setCards } from '../actions/cardActions';
 import ColumnsContainer from './ColumnsContainer';
 import Header from './static/Header';
 //
@@ -18,7 +18,7 @@ class App extends React.Component {
   onServerData(data) {
     const { dispatch } = this.props;
     const parsedServerData = JSON.parse(data.currentTarget.response);
-    dispatch(setItems(parsedServerData));
+    dispatch(setCards(parsedServerData));
 
   }
 

@@ -16,6 +16,7 @@ class Column extends React.Component {
          status={item.status}
          createdBy={item.created_by}
          assignedTo={item.assigned_to}
+         index={i}
         />
       )
     });
