@@ -11,6 +11,8 @@ class Card extends React.Component {
         <h3>Status: {this.props.status}</h3>
         <h3>Created By: {this.props.createdBy}</h3>
         <h3>Assigned To: {this.props.assignedTo}</h3>
+        <button className={styles.edit_btn}>edit</button>
+        <button>delete</button>
       </div>
     )
   }

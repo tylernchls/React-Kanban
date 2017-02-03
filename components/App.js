@@ -1,17 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { connect } from 'react-redux';
+import Immutable from 'immutable';
+import { setItems } from '../actions/cardsActions';
 import ColumnsContainer from './ColumnsContainer';
 import Header from './static/Header';
-import styles from './App.scss';
 //
 class App extends React.Component {
     constructor () {
     super();
-
-    // React only updates if there is a change in state
-    this.state = {
-      data: []
-    }
 
     this.onServerData =  this.onServerData.bind(this);
     this.onServerError =  this.onServerError.bind(this);
@@ -19,8 +16,9 @@ class App extends React.Component {
   }
 
   onServerData(data) {
+    const { dispatch } = this.props;
     const parsedServerData = JSON.parse(data.currentTarget.response);
-    this.setState({data: parsedServerData});
+    dispatch(setItems(parsedServerData));
 
   }
 
@@ -42,9 +40,9 @@ class App extends React.Component {
   }
 
   render() {
-    const {data} = this.state;
+    const {data} = this.props;
     return (
-      <div className={styles.App}>
+      <div className="App">
         <Header />
         <ColumnsContainer serverData={data} />
       </div>
@@ -52,6 +50,14 @@ class App extends React.Component {
   }
 };
 
+const mapStateToProps = (state, ownProps) => {
+  return {
+    data: state.cardsReducer.toJS(),
+  }
+}
 
 
-export default App;
+
+export default connect(
+  mapStateToProps
+)(App);
