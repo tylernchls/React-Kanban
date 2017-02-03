@@ -18,13 +18,14 @@ class Card extends React.Component {
  render() {
     return (
       <div className={styles.Card}>
-        <h3>Task: {this.props.task}</h3>
-        <h3>Priority: {this.props.priority}</h3>
-        <h3>Status: {this.props.status}</h3>
-        <h3>Created By: {this.props.createdBy}</h3>
-        <h3>Assigned To: {this.props.assignedTo}</h3>
+        <h3>{this.props.task}</h3>
+        <h5>Priority: {this.props.priority}</h5>
+        <h5>Created By: {this.props.createdBy}</h5>
+        <div className={styles.buttons}>
         <button className={styles.edit_btn}>edit</button>
         <button onClick={this.deleteCard}>delete</button>
+        </div>
+        <h5 className={styles.assignedTo}>{this.props.assignedTo}</h5>
       </div>
     )
   }

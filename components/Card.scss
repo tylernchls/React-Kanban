@@ -1,19 +1,46 @@
 .Card{
-  background-color: orange;
+
   border: solid black 1px;
   margin-bottom: 5px;
-  width: 300px;
+  width: 450px;
   height: 110px;
+  border-color: orange;
 
   h3{
     font-size: 15px;
     padding-left: 10px;
+    padding-top: 16px;
     margin: 0;
     text-align: left;
+    padding-bottom: 2px;
   }
 
-  .edit_btn {
-    color: blue;
+  h5{
+    font-size: 12px;
+    padding-left: 10px;
+    margin: 0;
+    text-align: left;
+    padding-bottom: 3px;
   }
+
+  .buttons{
+    padding-top: 5px;
+    padding-left: 10px;
+    text-align: left;
+
+    .edit_btn {
+
+    }
+
+  }
+
+  .assignedTo{
+    padding-bottom: 20px;
+    padding-right: 10px;
+    text-align: right;
+  }
+
+
+
 }
 

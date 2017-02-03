@@ -2,6 +2,7 @@
   position: relative;
   background-color: rgb(76,82,90);
   height: 60px;
+  text-align: right;
 
   h2{
     font-size: 15px;
@@ -11,6 +12,26 @@
     color: white;
     font-family: 'Lato', sans-serif;
     font-weight: 100;
+    letter-spacing: 3px;
+  }
+
+  .new_task {
+    letter-spacing: 3px;
+    margin-top: 12px;
+    margin-right: 10px;
+    background-color: rgb(76,82,90);
+    color: white;
+    font-size: 13px;
+    font-weight: 100;
+    padding: 8px 10px 8px 10px;
+    text-decoration: none;
+    border-color: white;
+    font-family: 'Lato', sans-serif;
+
+  }
+
+  .new_task:hover {
+    background-color: rgb(117,114,115);
   }
 }
 
