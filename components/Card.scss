@@ -1,14 +1,16 @@
 .Card{
-
-  border: solid black 1px;
-  margin-bottom: 5px;
+  border: solid orange 1px;
+  margin-bottom: 10px;
   width: 450px;
   height: 110px;
-  border-color: orange;
+  margin-right: 20px;
+
+
 
   h3{
+    color: rgb(117,114,115);
     font-size: 15px;
-    padding-left: 10px;
+    padding-left: 15px;
     padding-top: 16px;
     margin: 0;
     text-align: left;
@@ -16,29 +18,38 @@
   }
 
   h5{
+    color: rgb(117,114,115);
     font-size: 12px;
-    padding-left: 10px;
+    padding-left: 15px;
     margin: 0;
     text-align: left;
-    padding-bottom: 3px;
+    padding-bottom: 1px;
   }
 
   .buttons{
-    padding-top: 5px;
-    padding-left: 10px;
+    cursor: default;
+    margin-top: 2px;
+    margin-left: 15px;
     text-align: left;
 
-    .edit_btn {
+    .assignedTo{
+      text-align: right;
+      margin-top: -15px;
+    }
+
+    a {
+      padding-right: 5px;
+      font-size: 15px;
+      font-weight: 100;
 
     }
 
+    a:hover {
+      color: red;
+    }
   }
 
-  .assignedTo{
-    padding-bottom: 20px;
-    padding-right: 10px;
-    text-align: right;
-  }
+
 
 
 

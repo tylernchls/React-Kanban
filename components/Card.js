@@ -22,10 +22,10 @@ class Card extends React.Component {
         <h5>Priority: {this.props.priority}</h5>
         <h5>Created By: {this.props.createdBy}</h5>
         <div className={styles.buttons}>
-        <button className={styles.edit_btn}>edit</button>
-        <button onClick={this.deleteCard}>delete</button>
-        </div>
+        <a className={styles.edit}>Edit</a>
+        <a className={styles.delete} onClick={this.deleteCard}>Delete</a>
         <h5 className={styles.assignedTo}>{this.props.assignedTo}</h5>
+        </div>
       </div>
     )
   }

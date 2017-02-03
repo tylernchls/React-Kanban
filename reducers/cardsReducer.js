@@ -8,9 +8,17 @@ const cardsReducer = (state = initialState, action) => {
 
   switch(action.type) {
     case SET_CARDS:
-      return List(action.data);
+      let index = action.data.map((item, i) => {
+        item['index'] = i;
+        return item;
+      });
+      return List(index);
     case DELETE_CARD:
-      return newState.delete(action.data);
+      let newIndex = newState.delete(action.data).map((item, i) => {
+        item['index'] = i;
+        return item;
+      });
+      return List(newIndex);
 
     default:
      return newState;

@@ -4,7 +4,7 @@ import styles from './Column.scss'
 
 class Column extends React.Component {
   render () {
-    console.log('this.props: ', this.props);
+
     const {cards} =  this.props;
     let passedData = cards.map((item, i) => {
 
@@ -16,7 +16,7 @@ class Column extends React.Component {
          status={item.status}
          createdBy={item.created_by}
          assignedTo={item.assigned_to}
-         index={i}
+         index={item.index}
         />
       )
     });
