@@ -1,0 +1,14 @@
+.NewCardForm {
+  position: absolute;
+  left: 800px;
+  top: 300px;
+}
+
+.form {
+  box-size: border-box;
+}
+
+input[type=text], select {
+  display: block;
+  border-color: orange;
+}
