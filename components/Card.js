@@ -10,9 +10,17 @@ class Card extends React.Component {
     this.deleteCard = this.deleteCard.bind(this);
   }
 
+  deleteCardFromServer() {
+    const oReq = new XMLHttpRequest();
+    oReq.open("DELETE", `/api/cards/${this.props.id}`);
+    oReq.send();
+  }
+
   deleteCard(card) {
+    console.log('this.props: ', this.props);
     const { dispatch } = this.props;
     dispatch(deleteCard(this.props.index));
+    this.deleteCardFromServer();
   }
 
  render() {
@@ -36,8 +44,6 @@ const mapStateToProps = (state, ownProps) => {
 
   }
 }
-
-
 
 export default connect(
   mapStateToProps

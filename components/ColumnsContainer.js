@@ -10,7 +10,6 @@ class ColumnsContainer extends React.Component {
     }
 
     function inProgress(value) {
-      console.log('value: ', value);
       return value.status == "in progress";
     }
 
