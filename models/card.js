@@ -3,7 +3,10 @@ module.exports = function(sequelize, DataTypes) {
   var Card = sequelize.define('Card', {
     title: DataTypes.STRING,
     priority: DataTypes.STRING,
-    status: DataTypes.STRING,
+    status: {
+      type: DataTypes.STRING,
+      defaultValue: "in progress",
+    },
     created_by: DataTypes.STRING,
     assigned_to: DataTypes.STRING
   }, {

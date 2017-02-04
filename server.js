@@ -14,6 +14,8 @@ const webpackHotMiddleware = require('webpack-hot-middleware');
 const config = require('./webpack.config.js');
 
 app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.json({extended:true}))
+
 
 
 app.use(methodOverride(function (req, res) {

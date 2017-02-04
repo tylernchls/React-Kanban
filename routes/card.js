@@ -17,10 +17,10 @@ router.route('/')
       })
   })
   .post((req,res) => {
+    console.log('req.body: ', req.body);
     Card.create({
       title: req.body.title,
       priority: req.body.priority,
-      status: req.body.status,
       created_by: req.body.created_by,
       assigned_to: req.body.assigned_to
     })
