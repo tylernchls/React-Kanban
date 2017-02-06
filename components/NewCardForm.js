@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './NewCardForm.scss';
+
 class NewCardForm extends React.Component {
   constructor() {
     super();
@@ -13,6 +14,7 @@ class NewCardForm extends React.Component {
     event.preventDefault();
 
   }
+
 
   handleSubmit(event) {
     event.preventDefault();
@@ -31,6 +33,7 @@ class NewCardForm extends React.Component {
     oReq.open("POST", "/api/cards/");
     oReq.setRequestHeader("Content-Type", "application/json");
     oReq.send(JSON.stringify(newCard));
+    this.props.remount()
   }
 
   render() {

@@ -25,7 +25,7 @@ router.route('/')
       assigned_to: req.body.assigned_to
     })
     .then( card => {
-      res.redirect('/')
+      res.send({});
     })
     .catch((err) => {
       console.log(err);

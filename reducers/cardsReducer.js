@@ -8,6 +8,7 @@ const cardsReducer = (state = initialState, action) => {
 
   switch(action.type) {
     case SET_CARDS:
+      console.log('action.data: ', action.data);
       let index = action.data.map((item, i) => {
         item['index'] = i;
         return item;

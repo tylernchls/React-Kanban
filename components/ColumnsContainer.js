@@ -18,6 +18,7 @@ class ColumnsContainer extends React.Component {
 
     }
 
+
     let queueCards = this.props.serverData.filter(inQueue);
     let inProgressCards = this.props.serverData.filter(inProgress);
     let completedCards = this.props.serverData.filter(isCompleted);

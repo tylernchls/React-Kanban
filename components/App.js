@@ -7,7 +7,7 @@ import ColumnsContainer from './ColumnsContainer';
 import Header from './static/Header';
 //
 class App extends React.Component {
-    constructor () {
+  constructor () {
     super();
 
     this.onServerData =  this.onServerData.bind(this);
@@ -16,6 +16,7 @@ class App extends React.Component {
   }
 
   onServerData(data) {
+    console.log('onServerData');
     const { dispatch } = this.props;
     const parsedServerData = JSON.parse(data.currentTarget.response);
     dispatch(setCards(parsedServerData));
@@ -40,10 +41,11 @@ class App extends React.Component {
   }
 
   render() {
+    let remount = this.loadDataFromServer.bind(this);
     const {data} = this.props;
     return (
       <div className="App">
-        <Header />
+        <Header loadDataFromServer={remount} />
         <ColumnsContainer serverData={data} />
       </div>
     )
