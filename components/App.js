@@ -16,7 +16,6 @@ class App extends React.Component {
   }
 
   onServerData(data) {
-    console.log('onServerData');
     const { dispatch } = this.props;
     const parsedServerData = JSON.parse(data.currentTarget.response);
     dispatch(setCards(parsedServerData));

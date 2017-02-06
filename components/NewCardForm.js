@@ -5,14 +5,7 @@ class NewCardForm extends React.Component {
   constructor() {
     super();
 
-    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState({value: event.target.value});
-    event.preventDefault();
-
   }
 
 
@@ -40,10 +33,10 @@ class NewCardForm extends React.Component {
     return (
       <div className={styles.NewCardForm}>
         <form className={styles.form} onSubmit={this.handleSubmit}>
-            <input type="text" id="title" name="title"  onChange={this.handleChange} placeholder="TITLE" />
-            <input type="text" id="priority" name="priority" onChange={this.handleChange} placeholder="PRIORITY" />
-            <input type="text" id="created_by" name="created_by" onChange={this.handleChange} placeholder="CREATED BY" />
-            <input type="text" id="assigned_to" name="assigned_to" onChange={this.handleChange} placeholder="ASSIGNED TO" />
+            <input type="text" id="title" name="title" placeholder="TITLE" />
+            <input type="text" id="priority" name="priority" placeholder="PRIORITY" />
+            <input type="text" id="created_by" name="created_by" placeholder="CREATED BY" />
+            <input type="text" id="assigned_to" name="assigned_to" placeholder="ASSIGNED TO" />
           <input type="submit" value="SUBMIT" />
         </form>
       </div>

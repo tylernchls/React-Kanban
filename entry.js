@@ -2,16 +2,14 @@
 // New ES6 way, need babel in order to use ES6
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore, combineReducers } from 'redux';
+import App from './components/App.js';
 import { Provider } from 'react-redux';
-import * as reducers from './reducers';
+import configureStore from './configureStore';
 
 
-const reducer = combineReducers(reducers);
-const store = createStore(reducer);
+const store = configureStore();
 
 const initialState = store.getState();
-import App from './components/App.js';
 
 
 
