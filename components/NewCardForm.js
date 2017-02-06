@@ -5,16 +5,29 @@ class NewCardForm extends React.Component {
   constructor() {
     super();
 
+    this.state = {
+      hideForm: false
+    }
+
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.hideFormOnSubmit = this.hideFormOnSubmit.bind(this);
+  }
+
+  hideFormOnSubmit(e) {
+    console.log('clicked');
+    this.setState({hideForm: !this.state.hideForm});
   }
 
 
   handleSubmit(event) {
+    console.log('on submit');
     event.preventDefault();
+
     let title = document.getElementById('title').value;
     let priority = document.getElementById('priority').value;
     let created_by = document.getElementById('created_by').value;
     let assigned_to = document.getElementById('assigned_to').value;
+
     const newCard = {
       title,
       priority,
@@ -23,10 +36,16 @@ class NewCardForm extends React.Component {
     }
     console.log('newCard: ', newCard);
     const oReq = new XMLHttpRequest();
+    oReq.addEventListener('load', (event) => {
+      this.props.remount()
+      this.props.renderForm(event);
+    });
+    oReq.addEventListener('error', (event) => {
+      console.log('error', event);
+    });
     oReq.open("POST", "/api/cards/");
     oReq.setRequestHeader("Content-Type", "application/json");
     oReq.send(JSON.stringify(newCard));
-    this.props.remount()
   }
 
   render() {
@@ -43,7 +62,5 @@ class NewCardForm extends React.Component {
     );
   }
 }
-
-
 
 export default NewCardForm;

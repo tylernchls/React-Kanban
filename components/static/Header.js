@@ -14,7 +14,9 @@ class Header extends React.Component {
     this.renderForm = this.renderForm.bind(this);
   }
 
-  renderForm(e) {
+  renderForm(event) {
+    event.preventDefault();
+
     this.setState({showForm: !this.state.showForm});
   }
 
@@ -24,7 +26,7 @@ class Header extends React.Component {
       <div className={styles.Header}>
         <h2>KANBAN</h2>
         <button onClick={this.renderForm} className={styles.new_task}>+ NEW TASK</button>
-        {this.state.showForm && <NewCardForm remount={this.props.loadDataFromServer} />}
+        {this.state.showForm && <NewCardForm renderForm={this.renderForm} remount={this.props.loadDataFromServer} />}
       </div>
     )
 
