@@ -6,6 +6,7 @@ class ColumnsContainer extends React.Component {
   render () {
 
     function inQueue(value) {
+      console.log('value: ', value);
       return value.status == "in queue";
     }
 

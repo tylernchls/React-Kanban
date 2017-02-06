@@ -17,7 +17,6 @@ class Card extends React.Component {
   }
 
   deleteCard(card) {
-    console.log('this.props: ', this.props);
     const { dispatch } = this.props;
     dispatch(deleteCard(this.props.index));
     this.deleteCardFromServer();
@@ -27,6 +26,7 @@ class Card extends React.Component {
     return (
       <div className={styles.Card}>
         <h3>{this.props.task}</h3>
+        <h5>{this.props.status}</h5>
         <h5>Priority: {this.props.priority}</h5>
         <h5>Created By: {this.props.createdBy}</h5>
         <div className={styles.buttons}>
