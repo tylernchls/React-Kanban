@@ -5,7 +5,7 @@ module.exports = function(sequelize, DataTypes) {
     priority: DataTypes.STRING,
     status: {
       type: DataTypes.STRING,
-
+      defaultValue: "in queue",
     },
     created_by: DataTypes.STRING,
     assigned_to: DataTypes.STRING
