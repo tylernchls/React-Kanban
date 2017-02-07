@@ -5,14 +5,11 @@ class NewCardForm extends React.Component {
   constructor() {
     super();
 
-
-
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
   handleSubmit(event) {
-    console.log('on submit');
     event.preventDefault();
 
     let title = document.getElementById('title').value;

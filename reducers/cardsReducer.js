@@ -13,6 +13,7 @@ const cardsReducer = (state = initialState, action) => {
         return item;
       });
       return List(newState);
+
     case DELETE_CARD:
        newState = state.delete(action.data).map((item, i) => {
         item['index'] = i;

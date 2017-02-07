@@ -43,7 +43,7 @@ class Card extends React.Component {
         <h5>Created By: {this.props.createdBy}</h5>
         <div className={styles.buttons}>
         <a className={styles.edit} onClick={this.renderEditForm}>Edit</a>
-        {this.state.showForm && <EditCardForm {...this.props} hideRenderFormOnSubmit={this.renderEditForm.bind(this)} />}
+        {this.state.showForm && <EditCardForm {...this.props} hideFormOnSubmit={this.renderEditForm.bind(this)} />}
         <a className={styles.delete} onClick={this.deleteCard}>Delete</a>
         <h5 className={styles.assignedTo}>{this.props.assignedTo}</h5>
         </div>
