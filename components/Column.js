@@ -7,10 +7,9 @@ class Column extends React.Component {
 
     const {cards} =  this.props;
     let passedData = cards.map((item, i) => {
-
       return (
         <Card
-         key={item.id}
+         key={i}
          task={item.title}
          priority={item.priority}
          status={item.status}

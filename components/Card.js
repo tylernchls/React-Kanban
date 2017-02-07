@@ -1,13 +1,26 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { deleteCard } from '../actions/cardActions';
+import EditCardForm from './EditCardForm';
 import styles from './Card.scss'
 
 class Card extends React.Component {
   constructor() {
     super();
 
+    this.state = {
+      showForm: false
+    }
+
     this.deleteCard = this.deleteCard.bind(this);
+    this.renderEditForm = this.renderEditForm.bind(this);
+  }
+
+
+  renderEditForm(event) {
+    event.preventDefault();
+
+    this.setState({showForm: !this.state.showForm});
   }
 
   deleteCardFromServer() {
@@ -29,7 +42,8 @@ class Card extends React.Component {
         <h5>Priority: {this.props.priority}</h5>
         <h5>Created By: {this.props.createdBy}</h5>
         <div className={styles.buttons}>
-        <a className={styles.edit}>Edit</a>
+        <a className={styles.edit} onClick={this.renderEditForm}>Edit</a>
+        {this.state.showForm && <EditCardForm {...this.props} hideRenderFormOnSubmit={this.renderEditForm.bind(this)} />}
         <a className={styles.delete} onClick={this.deleteCard}>Delete</a>
         <h5 className={styles.assignedTo}>{this.props.assignedTo}</h5>
         </div>

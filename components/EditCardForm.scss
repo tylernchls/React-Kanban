@@ -1,0 +1,41 @@
+.EditCardForm {
+  position: absolute;
+  left: 700px;
+  top: 250px;
+
+}
+
+
+  input[type=text], select {
+    background-color: rgb(76,82,90);
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: white;
+    width: 360px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: none;
+    border-bottom: 2px solid orange;
+    outline-color: red;
+  }
+
+  input[type=submit], select{
+    letter-spacing: 3px;
+    margin-top: 12px;
+    margin-left: 20px;
+    background-color: rgb(76,82,90);
+    color: white;
+    font-size: 16px;
+    font-weight: 100;
+    padding: 8px 10px 8px 10px;
+    text-decoration: none;
+    border-color: white;
+    font-family: 'Lato', sans-serif;
+
+  }
+
+  input[type=submit]:hover {
+    background-color: rgb(117,114,115);
+
+  }
