@@ -50,19 +50,20 @@ class EditCardForm extends React.Component {
   }
 
   render() {
+    console.log('this.props: ', this.props);
     return (
       <div className={styles.EditCardForm}>
         <form onSubmit={this.handleSubmit}>
             <h3>EDIT CARD</h3>
-            <input type="text" id="title" name="title" placeholder="TITLE" />
-            <input type="text" id="priority" name="priority" placeholder="PRIORITY" />
-              <select id="status">
-                <option value="in queue">in queue</option>
-                <option value="in progress">in progress</option>
-                <option value="done">done</option>
+            <input type="text" id="title" name="title" placeholder={this.props.task} />
+            <input type="text" id="priority" name="priority" placeholder={this.props.priority} />
+            <select id="status">
+              <option value="in queue">in queue</option>
+              <option value="in progress">in progress</option>
+              <option value="done">done</option>
             </select>
-            <input type="text" id="created_by" name="created_by" placeholder="CREATED BY" />
-            <input type="text" id="assigned_to" name="assigned_to" placeholder="ASSIGNED TO" />
+            <input type="text" id="created_by" name="created_by" placeholder={this.props.createdBy} />
+            <input type="text" id="assigned_to" name="assigned_to" placeholder={this.props.assignedTo} />
             <input type="submit" value="SUBMIT" />
         </form>
       </div>
