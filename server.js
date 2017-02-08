@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
-const PORT = 8080;
 const db = require('./models');
 const Card = db.Card;
 const card = require('./routes/card');
