@@ -9,18 +9,23 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       title: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       priority: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       status: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       created_by: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       assigned_to: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       createdAt: {
