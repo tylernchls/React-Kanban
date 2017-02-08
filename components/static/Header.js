@@ -25,7 +25,7 @@ class Header extends React.Component {
     return (
       <div className={styles.Header}>
         <h2>KANBAN</h2>
-        <button onClick={this.renderForm} className={styles.new_task}>+ NEW TASK</button>
+        <button onClick={this.renderForm} className={styles.new_task}>+ NEW CARD</button>
         {this.state.showForm && <NewCardForm renderForm={this.renderForm} remount={this.props.loadDataFromServer} />}
       </div>
     )
