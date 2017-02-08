@@ -38,7 +38,7 @@ class Card extends React.Component {
   }
 
   changeStatus(event) {
-
+    console.log('this.props: ', this.props);
   }
 
  render() {

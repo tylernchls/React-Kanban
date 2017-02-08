@@ -56,10 +56,13 @@ class EditCardForm extends React.Component {
             <h3>EDIT CARD</h3>
             <input type="text" id="title" name="title" placeholder="TITLE" />
             <input type="text" id="priority" name="priority" placeholder="PRIORITY" />
-            <input type="text" id="status" name="status" placeholder="STATUS" />
+              <select id="status">
+                <option value="in queue">in queue</option>
+                <option value="in progress">in progress</option>
+                <option value="done">done</option>
+            </select>
             <input type="text" id="created_by" name="created_by" placeholder="CREATED BY" />
             <input type="text" id="assigned_to" name="assigned_to" placeholder="ASSIGNED TO" />
-
             <input type="submit" value="SUBMIT" />
         </form>
       </div>
