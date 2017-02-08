@@ -2,9 +2,9 @@
   position: absolute;
   left: 700px;
   top: 250px;
-
-}
-
+  border: 2px solid black;
+  background: linear-gradient(#757575, #d3d3d1);
+  padding-bottom: 3px;
 
   input[type=text], select {
     background-color: rgb(76,82,90);
@@ -39,3 +39,6 @@
     background-color: rgb(117,114,115);
 
   }
+
+}
+

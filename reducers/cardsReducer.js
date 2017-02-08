@@ -1,5 +1,5 @@
 import { List } from 'immutable';
-import {SET_CARDS, DELETE_CARD, EDIT_CARD} from '../actions/cardActions';
+import {SET_CARDS, DELETE_CARD, EDIT_CARD, CHANGE_STATUS} from '../actions/cardActions';
 
 const initialState = List();
 
@@ -22,8 +22,6 @@ const cardsReducer = (state = initialState, action) => {
       return List(newState);
 
     case EDIT_CARD:
-      console.log('state: ', state.toJS());
-      console.log('action.data: ', action.data);
       newState = state.update(action.data.index, (card) => {
         return action.data;
 
@@ -31,6 +29,13 @@ const cardsReducer = (state = initialState, action) => {
       return List(newState);
 
 
+    case CHANGE_STATUS:
+    console.log('action.data: ', action.data);
+      newState = state.update(action.data.status, (card) => {
+        return action.data;
+
+      })
+      return List(newState);
 
     default:
      return state;

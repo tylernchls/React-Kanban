@@ -53,6 +53,7 @@ class EditCardForm extends React.Component {
     return (
       <div className={styles.EditCardForm}>
         <form onSubmit={this.handleSubmit}>
+            <h3>EDIT CARD</h3>
             <input type="text" id="title" name="title" placeholder="TITLE" />
             <input type="text" id="priority" name="priority" placeholder="PRIORITY" />
             <input type="text" id="status" name="status" placeholder="STATUS" />

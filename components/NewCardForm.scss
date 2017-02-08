@@ -2,23 +2,24 @@
   position: absolute;
   left: 700px;
   top: 250px;
+  border: 2px solid black;
+  background: linear-gradient(#757575, #d3d3d1);
+  text-align: center;
+  padding-bottom: 3px;
 
-}
-
-
-  // input[type=text], select {
-  //   background-color: rgb(76,82,90);
-  //   font-family: 'Lato', sans-serif;
-  //   font-size: 16px;
-  //   color: white;
-  //   width: 360px;
-  //   padding: 12px 20px;
-  //   margin: 8px 0;
-  //   display: block;
-  //   border: none;
-  //   border-bottom: 2px solid orange;
-  //   outline-color: red;
-  // }
+  input[type=text], select {
+    background-color: rgb(76,82,90);
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: white;
+    width: 360px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: none;
+    border-bottom: 2px solid orange;
+    outline-color: red;
+  }
 
   input[type=submit], select{
     letter-spacing: 3px;
@@ -39,3 +40,7 @@
     background-color: rgb(117,114,115);
 
   }
+
+
+}
+
