@@ -10,6 +10,6 @@ Setting up the project
 - Connect to database (psql cmd = \c "name of database")
 - Update config.json file with name of your database
 - Run npm install
-- Run node server.js
+- After installation is complete, Run node server.js in your cmd line
 - Webpack will start the server listening on port 3000
 - Open up web browser and navigate to localhost:3000
