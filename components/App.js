@@ -6,7 +6,6 @@ import { setCards } from '../actions/cardActions';
 import ColumnsContainer from './ColumnsContainer';
 import Header from './static/Header';
 
-//
 class App extends React.Component {
   constructor () {
     super();
@@ -57,8 +56,6 @@ const mapStateToProps = (state, ownProps) => {
     data: state.cardsReducer.toJS(),
   }
 }
-
-
 
 export default connect(
   mapStateToProps

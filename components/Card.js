@@ -18,7 +18,6 @@ class Card extends React.Component {
 
   }
 
-
   renderEditForm(event) {
     event.preventDefault();
 
@@ -41,7 +40,7 @@ class Card extends React.Component {
     console.log('this.props: ', this.props);
   }
 
- render() {
+  render() {
     return (
       <div className={styles.Card}>
         <h3>{this.props.task}</h3>

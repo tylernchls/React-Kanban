@@ -2,7 +2,6 @@ import React from 'react';
 import NewCardForm from '../NewCardForm';
 import styles from './Header.scss';
 
-
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -19,7 +18,6 @@ class Header extends React.Component {
 
     this.setState({showForm: !this.state.showForm});
   }
-
 
   render() {
     return (

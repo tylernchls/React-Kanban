@@ -28,9 +28,7 @@ const cardsReducer = (state = initialState, action) => {
       })
       return List(newState);
 
-
     case CHANGE_STATUS:
-    console.log('action.data: ', action.data);
       newState = state.update(action.data.status, (card) => {
         return action.data;
 
@@ -43,6 +41,5 @@ const cardsReducer = (state = initialState, action) => {
 
 
 };
-
 
 export default cardsReducer;

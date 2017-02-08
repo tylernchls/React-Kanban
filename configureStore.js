@@ -6,7 +6,6 @@ import * as reducers from './reducers';
 const reducer = combineReducers(reducers);
 const loggerMiddleware = createLogger();
 
-
 export default function configureStore(preLoadedState) {
   return createStore(
     reducer,

@@ -4,7 +4,6 @@ const db = require('../models');
 const Card = db.Card;
 const bodyParser = require('body-parser');
 
-
 router.route('/')
   .get((req, res) => {
     Card.findAll()
@@ -31,7 +30,6 @@ router.route('/')
       console.log(err);
     })
   })
-
 
 router.route('/:id')
   .get((req, res) => {
@@ -80,7 +78,5 @@ router.route('/:id')
       console.log(err);
     })
   })
-
-
 
 module.exports = router;

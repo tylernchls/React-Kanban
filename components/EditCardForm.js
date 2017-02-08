@@ -4,7 +4,7 @@ import { editCard } from '../actions/cardActions';
 
 
 class EditCardForm extends React.Component {
-  constructor() {
+  constructor(props) {
     super();
 
     this.state = {
@@ -13,7 +13,6 @@ class EditCardForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
 
   handleSubmit(event) {
     event.preventDefault();
@@ -50,7 +49,6 @@ class EditCardForm extends React.Component {
   }
 
   render() {
-    console.log('this.props: ', this.props);
     return (
       <div className={styles.EditCardForm}>
         <form onSubmit={this.handleSubmit}>

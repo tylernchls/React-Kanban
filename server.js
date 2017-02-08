@@ -15,8 +15,6 @@ const config = require('./webpack.config.js');
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json({extended:true}))
 
-
-
 app.use(methodOverride(function (req, res) {
   if (req.body && typeof req.body === 'object' && '_method' in req.body) {
     let method = req.body._method
@@ -26,7 +24,6 @@ app.use(methodOverride(function (req, res) {
 }))
 
 app.use('/api/cards', card);
-
 
 // Check to see what dev environment we are in
 const isDeveloping = process.env.NODE_ENV !== 'production';

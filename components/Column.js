@@ -27,8 +27,6 @@ class Column extends React.Component {
     )
   }
 
-
 };
-
 
 export default Column;

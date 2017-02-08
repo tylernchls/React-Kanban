@@ -15,7 +15,6 @@ class ColumnsContainer extends React.Component {
 
     function isCompleted(value) {
       return value.status == "done";
-
     }
 
     let queueCards = this.props.serverData.filter(inQueue);

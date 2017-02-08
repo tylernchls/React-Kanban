@@ -3,9 +3,6 @@ export const DELETE_CARD = 'DELETE_CARD';
 export const EDIT_CARD = 'EDIT_CARD';
 export const CHANGE_STATUS = 'CHANGE_STATUS';
 
-
-
-
 export const setCards = (data) => {
   return {
     type: SET_CARDS,

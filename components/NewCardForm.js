@@ -8,7 +8,6 @@ class NewCardForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-
   handleSubmit(event) {
     event.preventDefault();
 
@@ -23,7 +22,7 @@ class NewCardForm extends React.Component {
       created_by,
       assigned_to
     }
-    console.log('newCard: ', newCard);
+
     const oReq = new XMLHttpRequest();
     oReq.addEventListener('load', (event) => {
       this.props.remount()
@@ -46,7 +45,6 @@ class NewCardForm extends React.Component {
             <input type="text" id="priority" name="priority" placeholder="PRIORITY" />
             <input type="text" id="created_by" name="created_by" placeholder="CREATED BY" />
             <input type="text" id="assigned_to" name="assigned_to" placeholder="ASSIGNED TO" />
-
             <input type="submit" value="SUBMIT" />
         </form>
       </div>
