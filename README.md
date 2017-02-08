@@ -6,6 +6,7 @@ Built a Digital Kanban board using:
 - HTML and CSS (via sass)
 - Express as the Server
 - Sequelize as the ORM for the Postgresql Datastore.
+- Webpack as module bundler
 ![alt tag](http://i.imgur.com/EpPsW2t.png)
 
 
