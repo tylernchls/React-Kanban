@@ -24,11 +24,11 @@ class EditCardForm extends React.Component {
     let assigned_to = document.getElementById('assigned_to').value;
 
     const newCard = {
-      title,
-      priority,
-      status,
-      created_by,
-      assigned_to
+      title: title ? title : this.props.task,
+      priority: priority ? priority : this.props.priority,
+      status: status ? status : this.props.status,
+      created_by: created_by ? created_by : this.props.created_by,
+      assigned_to: assigned_to ? assigned_to : this.props.assigned_to
     }
 
     const oReq = new XMLHttpRequest();
@@ -53,7 +53,7 @@ class EditCardForm extends React.Component {
       <div className={styles.EditCardForm}>
         <form onSubmit={this.handleSubmit}>
             <h3>EDIT CARD</h3>
-            <input type="text" id="title" name="title" placeholder={this.props.task} />
+            <input type="text" id="title"  name="title" placeholder={this.props.task} />
             <input type="text" id="priority" name="priority" placeholder={this.props.priority} />
             <select id="status">
               <option value="in queue">in queue</option>
