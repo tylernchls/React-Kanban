@@ -1,5 +1,7 @@
 # React-Kanban
 
+![alt tag](http://imgur.com/EpPsW2t)
+
 
 Setting up the project
 --------------------------
