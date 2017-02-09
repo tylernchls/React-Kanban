@@ -9,7 +9,7 @@ var config    = require(__dirname + '/../config/config.json')[env];
 var db        = {};
 
 if (process.env.DATABASE_URL) {
-  var sequelize = new Sequelize(process.env.DATABASE_URL {
+  var sequelize = new Sequelize(process.env.DATABASE_URL) {
     dialect: 'postgres',
     protocol: 'postgres',
     port: 5432,
