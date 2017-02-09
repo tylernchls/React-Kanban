@@ -9,12 +9,9 @@ var DB_URL    = process.env.DATABASE_URL || null;
 var db        = {};
 
 if (DB_URL) {
-  var host = 'https://blooming-harbor-32292.herokuapp.com/';
   var sequelize = new Sequelize(process.env.DATABASE_URL, {
     dialect: 'postgres',
     protocol: 'postgres',
-    port: 5432,
-    host: host,
     logging: false
   })
 } else {
