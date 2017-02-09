@@ -14,7 +14,7 @@ if (process.env.DATABASE_URL) {
     protocol: 'postgres',
     port: 5432,
     host: host,
-    logging: true
+    logging: false
   })
 } else {
   var config    = require(__dirname + '/../config/config.json')[env];
