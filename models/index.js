@@ -15,7 +15,7 @@ if (process.env.DATABASE_URL) {
     port: 5432,
     host: match[3],
     logging: true
-  })
+  }
 } else {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
