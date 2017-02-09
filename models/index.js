@@ -9,13 +9,13 @@ var config    = require(__dirname + '/../config/config.json')[env];
 var db        = {};
 
 if (process.env.DATABASE_URL) {
-  var sequelize = new Sequelize(process.env.DATABASE_URL) {
+  var sequelize = new Sequelize(process.env.DATABASE_URL, {
     dialect: 'postgres',
     protocol: 'postgres',
     port: 5432,
     host: match[3],
     logging: true
-  }
+  })
 } else {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
