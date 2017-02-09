@@ -41,10 +41,10 @@ class NewCardForm extends React.Component {
       <div className={styles.NewCardForm}>
         <form className={styles.form} onSubmit={this.handleSubmit}>
             <h3>NEW CARD</h3>
-            <input type="text" id="title" name="title" placeholder="TITLE" />
-            <input type="text" id="priority" name="priority" placeholder="PRIORITY" />
-            <input type="text" id="created_by" name="created_by" placeholder="CREATED BY" />
-            <input type="text" id="assigned_to" name="assigned_to" placeholder="ASSIGNED TO" />
+            <input type="text" required id="title" name="title" placeholder="TITLE" />
+            <input type="text" required  id="priority" name="priority" placeholder="PRIORITY" />
+            <input type="text" required id="created_by" name="created_by" placeholder="CREATED BY" />
+            <input type="text" required id="assigned_to" name="assigned_to" placeholder="ASSIGNED TO" />
             <input type="submit" value="SUBMIT" />
         </form>
       </div>

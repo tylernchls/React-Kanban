@@ -4,14 +4,6 @@ const db = require('../models');
 const Card = db.Card;
 const bodyParser = require('body-parser');
 
-const isObjEmpty = (req, res, next) => {
-  console.log('in middleware');
-  if(Object.keys(req.body).length === 0) {
-    res.redirect('/');
-  } else {
-    next()
-  }
-}
 
 router.route('/')
   .get((req, res) => {
@@ -24,8 +16,7 @@ router.route('/')
         res.json(err);
       })
   })
-  .post(isObjEmpty, (req,res) => {
-    console.log('req.body: ', req.body);
+  .post((req,res) => {
     Card.create({
       title: req.body.title,
       priority: req.body.priority,
@@ -52,7 +43,7 @@ router.route('/:id')
     })
 
   })
-  .put(isObjEmpty,(req, res) => {
+  .put((req, res) => {
     Card.update({
       title: req.body.title,
       priority: req.body.priority,
