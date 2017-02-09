@@ -5,6 +5,7 @@ var path      = require('path');
 var Sequelize = require('sequelize');
 var basename  = path.basename(module.filename);
 var env       = process.env.NODE_ENV || 'development';
+var DB_URL    = process.env.DATABASE_URL || null;
 var db        = {};
 
 if (process.env.DATABASE_URL) {
