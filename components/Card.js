@@ -54,14 +54,6 @@ class Card extends React.Component {
           <h5 className={styles.assignedTo}>{this.props.assignedTo}</h5>
         </div>
 
-        <div className={styles.move}>
-          <form>
-              <input type="radio" name="group1" value="in queue"/> <br />
-              <input type="radio" onClick={this.changeStatus} name="group1" value="in progress"/> <br />
-              <input type="radio" name="group1" value="done"/> <br />
-          </form>
-        </div>
-
       </div>
     )
   }
