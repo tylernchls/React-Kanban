@@ -4,7 +4,6 @@ const db = require('../models');
 const Card = db.Card;
 const bodyParser = require('body-parser');
 
-
 router.route('/')
   .get((req, res) => {
     Card.findAll()
