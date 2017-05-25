@@ -5,6 +5,7 @@ import Immutable from 'immutable';
 import { setCards } from '../actions/cardActions';
 import ColumnsContainer from './ColumnsContainer';
 import Header from './static/Header';
+import Footer from './static/Footer';
 
 class App extends React.Component {
   constructor () {
@@ -45,6 +46,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header loadDataFromServer={remount} />
+        <Footer />
         <ColumnsContainer serverData={data} />
       </div>
     )
