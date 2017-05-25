@@ -25,17 +25,17 @@ class ColumnsContainer extends React.Component {
     return (
       <div className={styles.ColumnsContainer}>
 
-        <div>
+        <div className={styles.ColumnWrapper}>
           <h3 className={styles.queue}>IN QUEUE</h3>
           <Column cards={queueCards} />
         </div>
 
-        <div>
+        <div className={styles.ColumnWrapper}>
           <h3 className={styles.progress}>IN PROGRESS</h3>
           <Column cards={inProgressCards} />
         </div>
 
-         <div>
+         <div className={styles.ColumnWrapper}>
           <h3 className={styles.done}>DONE</h3>
           <Column cards={completedCards} />
         </div>

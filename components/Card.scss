@@ -1,9 +1,9 @@
-.Card{
+.Card {
+  display: flex;
+  flex-direction: column;
   border: solid orange 1px;
+  width: 100%;
   margin-bottom: 10px;
-  width: 450px;
-  height: 110px;
-  margin-right: 20px;
 
   h3{
     color: black;
