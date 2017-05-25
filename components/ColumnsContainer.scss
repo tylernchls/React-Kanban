@@ -1,8 +1,9 @@
 .ColumnsContainer {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
+  border-right: solid gray 1px;
 
   h3.queue {
     color: rgb(71,67,68);
